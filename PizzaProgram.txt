@@ -1,0 +1,65 @@
+print("Welcome to Eliza's Pizzeria")
+#defining variables
+order = input("Would you like to order a pizza? ")
+price = 0
+num_pizzas = 0
+def multiply(x, y):
+    return x * y
+#while loop to run code when the input is yes
+while order == ("yes"):
+#asking for size
+#small = 6, medium = 8, large = 10
+    size = input("What size pizza would you like? ")
+
+    if size == ("small"):
+        size = 6
+    elif size == ("medium"):
+        size = 8
+    elif size == ("large"):
+        size = 10
+    else:
+        print("Oops, error.")
+#asking for different toppings
+#toppings between 1 and 3: 1.50 each, more than 3 is 1 each
+    toppings = int(input("How many toppings would you like? "))
+
+    if toppings >= 1 and toppings <= 3:
+        toppings = multiply (float(toppings), 1.50)
+    elif toppings > 3:
+        toppings == input
+    elif toppings == 0:
+        toppings == 0
+    else:
+        print("Oops, error.")
+
+    order = input("Would you like to order a pizza? ")
+    price = float(price) + float(toppings) + float(size)
+#adding 1 to the total number of pizzas
+    num_pizzas += 1
+#asking if they want to add delivery and tip
+#delivery = 5, tip = 3
+delivery = input("Would you like your pizza to be delivered?")
+tip = input("Would you like to add a tip of $2? ")
+#tax = 6% of the price
+tax = float(price) * float(0.06)
+if delivery == ("yes"):
+    delivery = 5
+else:
+    delivery = 0
+
+if tip == ("yes"):
+    tip = 2
+else:
+    tip = 0
+#adding everything into the total
+total = float(price) + float(delivery) + float(tip) + float(tax)
+print()
+#receipt/printing all calculations
+print("Thank you for ordering from Eliza and Caroline's Pizzeria.")
+print("You have ordered " + str(num_pizzas) + " pizzas")
+print("Your pizzas cost $" + str(price))
+print("Your tax is $" + str(tax))
+print("Your delivery costs $" + str(delivery))
+print("Your tip is $" + str(tip))
+print("Your total is $" + str(total))
+print("Enjoy your pizza. Come back soon!")
